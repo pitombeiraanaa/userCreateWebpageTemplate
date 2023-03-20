@@ -1,0 +1,103 @@
+<body>
+  <h1>Customize seu site aqui!</h1>
+
+  <mat-stepper class="form" orientation="vertical">
+    <!-- passo 1 - cor da fonte -->
+    <mat-step>
+      <ng-template matStepLabel>Passo 1</ng-template>
+      <ng-template matStepContent>
+        <p>Escolha a cor da fonte:</p>
+        <input
+          matInput
+          type="color"
+          [(ngModel)]="fontColor"
+          (change)="updateColors()"
+        />
+        <button mat-button matStepperNext>próximo</button>
+      </ng-template>
+    </mat-step>
+
+    <!-- passo 2 - tamanho da fonte  -->
+    <mat-step>
+      <ng-template matStepLabel>Passo 2</ng-template>
+      <ng-template matStepContent>
+        <p>Escolha o tamanho da fonte:</p>
+        <input
+          matInput
+          type="number"
+          [(ngModel)]="fontSize"
+          (change)="updateColors()"
+        />
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </ng-template>
+    </mat-step>
+
+    <!-- passo 3 - margin -->
+    <mat-step>
+      <ng-template matStepLabel>Passo 3</ng-template>
+      <p>Defina o tamanho da margin:</p>
+      <input
+        matInput
+        type="number"
+        [(ngModel)]="margin"
+        (change)="updateColors()"
+      />
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </mat-step>
+
+    <!-- passo 4 - padding -->
+    <mat-step>
+      <ng-template matStepLabel>Passo 4</ng-template>
+      <p>Defina o tamanho do padding:</p>
+      <input
+        matInput
+        type="number"
+        [(ngModel)]="padding"
+        (change)="updateColors()"
+      />
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </mat-step>
+
+    <!-- passo 5 - background primario site -->
+    <mat-step>
+      <ng-template matStepLabel>Passo 5</ng-template>
+      <p>Defina a cor do primária do background:</p>
+      <input
+        matInput
+        type="color"
+        [(ngModel)]="primaryColor"
+        (change)="updateColors()"
+      />
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </mat-step>
+
+    <!-- passo 6 - background secundario site -->
+    <mat-step>
+      <ng-template matStepLabel>Passo 6</ng-template>
+      <p>Defina a cor secundária do background:</p>
+      <input
+        matInput
+        type="color"
+        [(ngModel)]="secondaryColor"
+        (change)="updateColors()"
+      />
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </mat-step>
+  </mat-stepper>
+
+  <div class="preview">
+    <div class="card">
+      <h2>Desenvolvimento Front End</h2>
+      <p>O desenvolvimento front-end é a área da programação que se concentra em criar a interface visual de um site ou aplicativo. Isso envolve o uso de linguagens de marcação, como HTML e CSS, para criar a estrutura e o estilo da página, bem como a codificação em JavaScript para adicionar interatividade e dinamismo.
+
+        Um desenvolvedor front-end precisa ter um bom conhecimento das tecnologias web e habilidades de design para criar uma experiência de usuário atraente e intuitiva. Além disso, ele deve estar atualizado com as últimas tendências e práticas do setor para garantir que os projetos sejam responsivos, acessíveis e compatíveis com diferentes dispositivos e navegadores.
+
+        O desenvolvimento front-end é uma área importante e em constante evolução na indústria de tecnologia, sendo fundamental para a criação de sites e aplicativos modernos e eficientes.</p>
+    </div>
+  </div>
+</body>
